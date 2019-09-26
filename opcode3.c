@@ -110,26 +110,17 @@ void _mod(stack_t **stack, unsigned int line_number)
 */
 void _pchar(stack_t **stack, unsigned int line_number)
 {
-	int i;
 
 	if ((*stack) == NULL)
 	{
-		fprintf(stderr, "L%u: can't pchar, stack empty", line_number);
+		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	if ((*stack)->n < 0 || (*stack)->n > 127)
+	if ((*stack)->n < 32 || (*stack)->n > 126)
 	{
-		fprintf(stderr, "L%u: can't pchar, value out of range", line_number);
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	i = 0;
-	while (i < 127)
-	{
-		if ((*stack)->n == i)
-		{
-			putchar((*stack)->n);
-			putchar('\n');
-		}
-		i++;
-	}
+	putchar(push_arg);
+	putchar('\n');
 }
