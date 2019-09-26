@@ -63,6 +63,8 @@ void _rotl(stack_t **stack, unsigned int line_number)
 	unsigned int tmp;
 	stack_t *current = *stack;
 
+	if (*stack == NULL || (*stack)->next == NULL)
+		return;
 	tmp = current->n;
 	_pop(stack, line_number);
 	add_dnodeint_end(stack, tmp);
