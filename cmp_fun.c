@@ -49,7 +49,7 @@ void chkpop(char *line_buf, FILE *fp, stack_t *stack, unsigned int line)
 {
 	if (stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", line);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line);
 		free(line_buf);
 		free_stack(stack);
 		fclose(fp);
