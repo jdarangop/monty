@@ -31,6 +31,7 @@ void check_token(char *token1, unsigned int line_number, stack_t **stack)
 		i++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token1);
+	exit(EXIT_FAILURE);
 }
 
 /**
