@@ -49,7 +49,7 @@ void chkpush(char *token, char *line_buf, FILE *fp, stack_t *stack, int line)
 	{
 		while (token[i] != '\0')
 		{
-			if (token[i] > '0' && token[i] < '9')
+			if (token[i] >= '0' && token[i] <= '9')
 			{
 				i++;
 				continue;
@@ -69,7 +69,10 @@ void chkpush(char *token, char *line_buf, FILE *fp, stack_t *stack, int line)
 			}
 			i++;
 		}
-		push_arg = atoi(token);
+		if (strcmp(token, "0") == 0)
+			push_arg = 0;
+		else
+			push_arg = atoi(token);
 	}
 	else
 	{
