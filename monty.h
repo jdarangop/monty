@@ -62,6 +62,7 @@ void chkpint(char *line_buf, FILE *fp, stack_t *stack, unsigned int line);
 void chkpop(char *line_buf, FILE *fp, stack_t *stack, unsigned int line);
 void chkswap(char *line_buf, FILE *fp, stack_t *stack, unsigned int line);
 void chkadd(char *line_buf, FILE *fp, stack_t *stack, unsigned int line);
+void _pstr(stack_t **stack, unsigned int line_number);
 
 int push_arg;
 
