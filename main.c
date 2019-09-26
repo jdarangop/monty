@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
 	while (getline(&line_buf, &line_buf_size, fp) != EOF)
 	{
 		line_count++;
+		if (strcmp(line_buf, "\n") == 0)
+			continue;
 		token1 = strtok(line_buf, " \t\r\n\a");
 		token2 = strtok(NULL, " \t\r\n\a");
 		cmp(token1, token2, line_buf, fp, &stack, (int)line_count);
