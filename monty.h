@@ -52,7 +52,7 @@ void _swap(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
 
-
+void _nop(stack_t **stack, unsigned int line_number);
 void cmp(char *tk, char *arg, char *buf, FILE *fp, stack_t **stack, int line);
 void chkpint(char *line_buf, FILE *fp, stack_t *stack, unsigned int line);
 void chkpop(char *line_buf, FILE *fp, stack_t *stack, unsigned int line);
