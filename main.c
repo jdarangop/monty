@@ -32,6 +32,8 @@ int main(int argc, char *argv[])
 		token1 = strtok(line_buf, " \t\r\n\a");
 		if (token1 == NULL)
 			continue;
+		if (*token1 == '#')
+			continue;
 		token2 = strtok(NULL, " \t\r\n\a");
 		cmp(token1, token2, line_buf, fp, &stack, (int)line_count);
 		check_token(token1, line_count, &stack);
