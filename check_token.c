@@ -22,11 +22,12 @@ void check_token(char *token1, unsigned int line_number, stack_t **stack)
 			{"mul", _mul},
 			{"mod", _mod},
 			{"pchar", _pchar},
+			{"pstr", _pstr},
 			{NULL, NULL}
 			};
 	int i = 0;
 
-	while (i < 12)
+	while (i < 13)
 	{
 		if (strcmp(array[i].opcode, token1) == 0)
 		{
