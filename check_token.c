@@ -24,6 +24,7 @@ void check_token(char *token1, unsigned int line_number, stack_t **stack)
 			{"pchar", _pchar},
 			{"pstr", _pstr},
 			{"rotl", _rotl},
+			{"rotr", _rotr},
 			{NULL, NULL}
 			};
 	int i = 0;
