@@ -17,11 +17,15 @@ void check_token(char *token1, unsigned int line_number, stack_t **stack)
 			{"swap", _swap},
 			{"add", _add},
 			{"nop", _nop},
+			{"sub", _sub},
+			{"div", _div},
+			{"mul", _mul},
+			{"mod", _mod},
 			{NULL, NULL}
 			};
 	int i = 0;
 
-	while (i < 7)
+	while (i < 11)
 	{
 		if (strcmp(array[i].opcode, token1) == 0)
 		{
