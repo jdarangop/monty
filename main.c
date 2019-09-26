@@ -40,5 +40,6 @@ int main(int argc, char *argv[])
 	line_buf = NULL;
 	free_stack(stack);
 	fclose(fp);
-	return (EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
+	return (0);
 }
