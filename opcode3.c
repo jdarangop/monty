@@ -102,3 +102,34 @@ void _mod(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n = mod;
 	_pop(stack, line_number);
 }
+
+/**
+* _pchar - prints the char at the top of the stack
+* @stack: header
+* @line_number: elements
+*/
+void _pchar(stack_t **stack, unsigned int line_number)
+{
+	int i;
+
+	if ((*stack) == NULL)
+	{
+		fprintf(stderr, "L%u: can't pchar, stack empty", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack)->n < 0 || (*stack)->n > 127)
+	{
+		fprintf(stderr, "L%u: can't pchar, value out of range", line_number);
+		exit(EXIT_FAILURE);
+	}
+	i = 0;
+	while (i < 127)
+	{
+		if ((*stack)->n == i)
+		{
+			putchar((*stack)->n);
+			putchar('\n');
+		}
+		i++;
+	}
+}
